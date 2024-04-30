@@ -1,0 +1,140 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.medplus</groupId>
+  <artifactId>webpwa</artifactId>
+  <version>1.30.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>MedplusMartUi</name>
+  <description>UI Project for MedplusMart Web</description>
+  <properties>
+   	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+   </properties>
+  <build>
+    <finalName>MedplusMartUi</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<followSymLinks>false</followSymLinks>
+					<filesets>
+						<fileset>
+							<directory>dist</directory>
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.github.eirslett</groupId>
+				<artifactId>frontend-maven-plugin</artifactId>
+				<version>1.10.0</version>
+
+				<configuration>
+					<nodeVersion>v16.13.0</nodeVersion>
+				</configuration>
+
+				<executions>
+					<execution>
+						<id>install node and npm</id>
+						<goals>
+							<goal>install-node-and-npm</goal>
+						</goals>
+						<phase>generate-resources</phase>
+					</execution>
+					<execution>
+						<id>npm install</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<phase>generate-resources</phase>
+						<configuration>
+							<arguments>install --legacy-peer-deps</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>update package json</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<configuration>
+							<arguments>
+								version ${project.version} --allow-same-version true
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>scss compile</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<phase>generate-resources</phase>
+						<configuration>
+							<arguments>run build-css</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>remove public</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<configuration>
+							<arguments>run remove-public</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>webpack client build</id>
+						<goals>
+							<goal>webpack</goal>
+						</goals>
+						<configuration>
+							<arguments>--progress --config ./config/webpack.client.config.js</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-images</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<configuration>
+							<arguments>run image-copy</arguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>3.1.0</version>
+				<executions>
+					<execution>
+						<id>assets-bundle</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<skipAssembly>${skip.assets.bundle}</skipAssembly>
+							<appendAssemblyId>false</appendAssemblyId>
+							<descriptors>
+								<descriptor>assets-bundle.xml</descriptor>
+							</descriptors>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<distributionManagement>
+		<repository>
+			<id>deployment</id>
+			<name>Internal Releases</name>
+			<url>http://192.168.1.101:8081/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>deployment</id>
+			<name>Internal Releases</name>
+			<url>http://192.168.1.101:8081/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>

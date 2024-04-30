@@ -1,0 +1,38 @@
+.image-upload-container .image-content {
+    overflow-y: auto;
+}
+
+.image-upload {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    margin-top: 0.75rem;
+}
+.image-upload p{
+    width: 200px;
+    padding-right: 1rem;
+    margin-bottom: 0;
+}
+
+.image-upload .remove {
+    position: absolute;
+    right: 0.5rem;
+    cursor: pointer;
+    padding: 4px;
+    top: 46%;
+    transform: translate(0, -50%);
+}
+
+#message_list button.add-more-btn{
+    color: #e71c37;
+    background-color: #fff;
+    border: 1px solid #6c757d!important;
+}
+
+#message_list button.add-more-btn:hover {
+    background-color: #f8f9fa;
+    color: #000000
+}

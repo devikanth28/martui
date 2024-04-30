@@ -1,0 +1,13 @@
+#embedded_messenger {
+    height: 400px;
+}
+
+#embedded_messenger iframe {
+    border: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#embedded_messenger_sidebar_modal {
+    height: calc(100vh + 1rem);
+}

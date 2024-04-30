@@ -1,0 +1,47 @@
+.section_outgoing {
+    padding: 0 1rem 0.125rem 1rem;
+    background-size: 35px;
+    background-position: calc(100% - 12px) 2px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    position: relative;
+}
+
+.section_outgoing:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0px;
+    right: 10px;
+    top: 0;
+    border: 7px solid;
+    border-color: #595b5a transparent transparent transparent;
+}
+
+.section_outgoing:last-child {
+    margin-bottom: 0;
+}
+
+.message.outgoing {
+    background-color: #595b5a;
+}
+
+.message.outgoing img {
+    max-height: 100px;
+    max-width: 100%;
+}
+
+.message.outgoing:first-child {
+    border-radius: 6px 0px 6px 6px;
+}
+
+.message.outgoing p,
+.message.outgoing .time-stamp {
+    color: #ffffff;
+    word-break: break-all;
+}
+
+.message.outgoing::before {
+    display: none;
+}

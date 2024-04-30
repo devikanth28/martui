@@ -1,0 +1,128 @@
+hr {
+    border: 1px solid #dee2e6;
+}
+
+.section_divide {
+    padding: 1.5rem 1rem;
+}
+
+.section_message {
+    padding: 0 1rem 0rem 3.5rem;
+    background-size: 2.5rem !important;
+    display: flex;
+    background-position: 12px 2px;
+}
+
+.section_message:last-child {
+    margin-bottom: 0;
+}
+
+.bot_avatar {
+    padding: 0 1rem 0rem 0.75rem !important;
+    position: relative;
+}
+
+.message {
+    font-size: 14px;
+    padding: 0.5rem;
+    background: #FFFFFF;
+    color: #080808;
+    border-radius: 6px;
+    width: auto;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    max-width: 75%;
+}
+
+.message.message:first-child {
+    border-radius: 2px 6px 6px 6px;
+}
+
+.message .time-stamp {
+    display: block;
+    text-align: right;
+    font-size: 10px;
+    color: #6c757d;
+    margin-left: 1.5rem;
+}
+
+.message p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.message p:last-child {
+    margin-bottom: 0;
+}
+
+.bot_avatar .message.message:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0px;
+    left: 55px;
+    top: 0;
+    border: 7px solid;
+    border-color: #ffffff transparent transparent transparent;
+}
+
+.typing-indicator {
+    display: table;
+    margin: 0 auto;
+    position: relative;
+    padding: 5px 0;
+}
+
+.typing-indicator span {
+    height: 6px;
+    width: 6px;
+    float: left;
+    margin: 0 1px;
+    background-color: #333;
+    display: block;
+    border-radius: 50%;
+    opacity: 0.4;
+}
+
+.typing-indicator span:nth-of-type(1) {
+    animation: 1s blink infinite 0.3333s;
+}
+
+.typing-indicator span:nth-of-type(2) {
+    animation: 1s blink infinite 0.6666s;
+}
+
+.typing-indicator span:nth-of-type(3) {
+    animation: 1s blink infinite 0.9999s;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #888888;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #cccccc;
+}
+
+.separator::before {
+    margin-right: .25em;
+}
+
+.separator::after {
+    margin-left: .25em;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 1;
+    }
+}

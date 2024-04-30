@@ -1,0 +1,147 @@
+#message_replies {
+    flex-shrink: 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+#message_replies #message_replies_container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px 0rem 0.5rem;
+    /* background-color: rgb(246, 246, 246); */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#message_replies #message_replies_container ul li {
+    display: inline-block;
+    margin: 0.5rem 0.5rem 0 0;
+}
+#message_replies #message_replies_container ul li.location-pin{
+    margin-top: 0;
+    margin-right: 0;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    padding-right: 1.5rem;
+}
+#message_replies #message_replies_container ul li.location-pin:hover svg g path{
+    fill:#e71c37;
+}
+#message_replies #message_replies_container ul li.location-pin::after{
+    color: rgba(0,0,0,.3);
+    content: "";
+    width: 15px;
+    display: inline-block;
+    height: 15px;
+    position: absolute;
+    right: 10px;
+    margin: auto;
+    background-size: contain;
+    opacity: .5;
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDE4NS4zNDMgMTg1LjM0MyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTg1LjM0MyAxODUuMzQzOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNTEuNzA3LDE4NS4zNDNjLTIuNzQxLDAtNS40OTMtMS4wNDQtNy41OTMtMy4xNDljLTQuMTk0LTQuMTk0LTQuMTk0LTEwLjk4MSwwLTE1LjE3NSAgICBsNzQuMzUyLTc0LjM0N0w0NC4xMTQsMTguMzJjLTQuMTk0LTQuMTk0LTQuMTk0LTEwLjk4NywwLTE1LjE3NWM0LjE5NC00LjE5NCwxMC45ODctNC4xOTQsMTUuMTgsMGw4MS45MzQsODEuOTM0ICAgIGM0LjE5NCw0LjE5NCw0LjE5NCwxMC45ODcsMCwxNS4xNzVsLTgxLjkzNCw4MS45MzlDNTcuMjAxLDE4NC4yOTMsNTQuNDU0LDE4NS4zNDMsNTEuNzA3LDE4NS4zNDN6IiBmaWxsPSIjNzA3MDcwIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+    top: 50%;
+    transform: translate(0, -50%);
+}
+#message_replies #message_replies_container ul li.location-pin svg{
+    fill: #707070;
+    vertical-align: bottom;
+    margin-right: 0.5rem;
+}
+#message_replies #message_replies_container ul li.location-pin a{
+    font-size: 12px;
+    font-weight: 500;
+}
+#message_replies #message_replies_container ul li.location-pin a:hover{
+    text-decoration: none;
+}
+
+#message_replies #message_replies_container .time-stamp {
+    display: block;
+    text-align: right;
+    font-size: 10px;
+    color: rgb(108, 117, 125);
+    /* background-color: rgb(246, 246, 246); */
+    padding: 0rem;
+    border-radius: 0px 0px 6px 6px;
+}
+
+#message_replies_container {
+    border-radius: 0 0 6px 6px;
+}
+
+#message_replies_container section {
+    background-color: transparent !important;
+    justify-content: space-between;
+    padding-top: 0.5rem !important;
+}
+
+#message_replies a.quick-replies {
+    text-decoration: none;
+    display: block;
+    border: 1px solid #e71c37;
+    color: #e71c37;
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px;
+    padding: 0.25rem 0.5rem;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+#message_replies a.quick-replies:hover {
+    background-color: #e71c37;
+    color: #fff;
+}
+
+.back-to-previous-option {
+    color: #2699FB !important;
+    padding: 0rem 0.25rem;
+    font-size: 10px !important;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.spinner-border {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: text-bottom;
+    border: 0.25em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spinner-border .75s linear infinite;
+}
+
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+    border-width: 0.15em;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+#invoice {
+    color : rgb(38, 153, 251);
+}
+
+.line-clamp-3{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    -moz-box-orient: vertical;
+    -moz-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

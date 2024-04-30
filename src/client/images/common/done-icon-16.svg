@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g id="done-icn-16" transform="translate(-262 -283)">
+    <rect id="Rectangle_12488" data-name="Rectangle 12488" width="16" height="16" rx="8" transform="translate(262 283)" fill="#f8f9fa"/>
+    <path id="np_check_5468232_000000" d="M21,15a6,6,0,1,0,6,6A6,6,0,0,0,21,15Zm2.588,4.952-3.323,3.323a.545.545,0,0,1-.177.118.535.535,0,0,1-.581-.118l-1.671-1.67a.536.536,0,0,1,.757-.757l1.292,1.292,2.945-2.945a.536.536,0,1,1,.758.757Z" transform="translate(249 270)" fill="#11b094"/>
+  </g>
+</svg>

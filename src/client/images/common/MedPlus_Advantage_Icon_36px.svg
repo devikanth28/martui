@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36" viewBox="0 0 36 36">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_36px" width="36" height="36" transform="translate(1575 905)" fill="#e6e6e6"/>
+    </clipPath>
+  </defs>
+  <g id="MedPlus_Advantage_Icon_36px" transform="translate(-1575 -905)" clip-path="url(#clip-path)">
+    <g id="Group_27890" data-name="Group 27890" transform="translate(27 54)">
+      <path id="Path_41661" data-name="Path 41661" d="M23.033,56.117,16.569,68.974,8.69,68.969,10,66.368,19.521,47.5s3.039,5.9,3.553,6.892c.5.947.382.865-.041,1.725Z" transform="translate(1541.31 811.5)" fill="#b01116" fill-rule="evenodd"/>
+      <path id="Path_41662" data-name="Path 41662" d="M42.988,56.117,36.524,68.974l-7.884-.005,1.313-2.6L39.471,47.5s3.039,5.9,3.553,6.892c.5.947.382.865-.036,1.725Z" transform="translate(1531.514 811.5)" fill="#b01116" fill-rule="evenodd"/>
+      <path id="Path_41663" data-name="Path 41663" d="M56.63,67.62,54.37,72.1l-1.68,3.329,1.72,3.425,3.369-.005h4.515l-.753-1.491-.56-1.115Z" transform="translate(1519.705 801.56)" fill="#343a40" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+#message_replies_container .list-group-item {
+    background-color: transparent;
+}
+
+#message_window section {
+    box-shadow: none;
+}
+
+#message_window .form-control {
+    margin-left: 1.875rem;
+}
+
+#message_window .form-check {
+    padding-left: 1.875rem;
+}
+
+.checkmark {
+    content: "";
+    position: absolute;
+    top: 0.25rem;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: #eee;
+    border-radius: 15px;
+}
+
+.form-check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.form-check:focus input~.checkmark {
+    background-color: #ccc;
+}
+
+.form-check input:checked~.checkmark {
+    background-color: #08CE73;
+}
+
+.form-check .checkmark:after {
+    content: "";
+    position: absolute;
+    left: .55rem;
+    top: .32rem;
+    width: .35rem;
+    height: .65rem;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
